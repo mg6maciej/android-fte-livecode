@@ -1,0 +1,16 @@
+package pl.mg6.fte.livecode
+
+import android.app.Activity
+import android.os.Bundle
+import groovy.transform.CompileStatic
+import pl.mg6.fte.livecode.dagger.Injector
+
+@CompileStatic
+abstract class BaseActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState)
+        Injector.inject(this)
+    }
+}
