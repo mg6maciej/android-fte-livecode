@@ -3,16 +3,26 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="@dimen/padding">
 
-    <EditText
-        android:id="@+id/main_edit"
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/main_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/github_username_hint" />
+
+    </android.support.design.widget.TextInputLayout>
 
     <TextView
         android:id="@+id/main_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding"
+        android:textAppearance="?android:textAppearanceLarge" />
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Functional testing with Espresso - Livecode</string>
+    <string name="github_username_hint">Github username</string>
     <string name="empty_user_info_placeholder">User with many secrets…</string>
     <string name="network_error">Network error occurred Try again later.</string>
     <string name="user_does_not_exist">User doesn\'t exist. Spy on someone else.</string>
