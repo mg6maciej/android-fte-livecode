@@ -39,10 +39,10 @@ dependencies {
     compile 'com.squareup.dagger:dagger:1.2.2'
     provided 'com.squareup.dagger:dagger-compiler:1.2.2'
     compile 'com.squareup.retrofit:retrofit:1.9.0'
-    compile 'com.squareup.okhttp:okhttp-urlconnection:2.3.0'
-    compile 'com.squareup.okhttp:okhttp:2.3.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile 'io.reactivex:rxandroid:0.24.0'
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.0') {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2') {
         exclude group: 'javax.inject'
     }
 }
