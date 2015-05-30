@@ -9,6 +9,6 @@ import rx.Observable
 @CompileStatic
 interface GithubApi {
 
-    @GET("/users/{user}")
-    Observable<User> call(@Path("user") String user)
+    @GET('/users/{name}')
+    Observable<User> call(@Path('name') String name)
 }
