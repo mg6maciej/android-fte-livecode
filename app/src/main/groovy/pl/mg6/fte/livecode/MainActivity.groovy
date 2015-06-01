@@ -30,9 +30,9 @@ final class MainActivity extends BaseActivity {
     }
 
     private void initViews() {
-        editText = findViewById(R.id.main_edit) as EditText
+        editText = (EditText) findViewById(R.id.main_edit)
         editText.onEditorActionListener = this.&onEditorAction
-        textView = findViewById(R.id.main_text) as TextView
+        textView = (TextView) findViewById(R.id.main_text)
     }
 
     private boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
