@@ -35,9 +35,11 @@ final class MainActivity extends BaseActivity {
     }
 
     private boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-        def name = v.text.toString().trim()
-        if (name) {
-            callForUser(name)
+        if (event == null || event.action == KeyEvent.ACTION_UP) {
+            def name = v.text.toString().trim()
+            if (name) {
+                callForUser(name)
+            }
         }
         return true
     }
