@@ -19,6 +19,7 @@ final class MainActivity extends BaseActivity {
     protected GithubApi githubApi
     private Subscription subscription
 
+    private EditText editText
     private TextView textView
 
     @Override
@@ -29,19 +30,27 @@ final class MainActivity extends BaseActivity {
     }
 
     private void initViews() {
-        def editText = findViewById(R.id.main_edit) as EditText
+        editText = findViewById(R.id.main_edit) as EditText
         editText.onEditorActionListener = this.&onEditorAction
         textView = findViewById(R.id.main_text) as TextView
     }
 
     private boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-        if (event == null || event.action == KeyEvent.ACTION_UP) {
-            def name = v.text.toString().trim()
+        if (shouldInitAction(event)) {
+            def name = getUserName()
             if (name) {
                 callForUser(name)
             }
         }
         return true
+    }
+
+    private boolean shouldInitAction(KeyEvent event) {
+        return event == null || event.action == KeyEvent.ACTION_UP
+    }
+
+    private String getUserName() {
+        return editText.text.toString().trim()
     }
 
     private void callForUser(String name) {
